@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header__title {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.header__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.header__button {
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.header__button:hover {
+  scale: 1.1;
+}
