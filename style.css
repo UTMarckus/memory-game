@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -36,4 +36,48 @@ body {
 
 .header__button:hover {
   scale: 1.1;
+}
+
+.game {
+  margin: 20px 0;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.info span {
+  margin: 0 0 0 10px;
+}
+
+.game__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 100px;
+}
+
+.card>img {
+  width: 100%;
+}
+
+.card__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.card_open .card__cover {
+  opacity: 0;
 }
