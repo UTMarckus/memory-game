@@ -47,6 +47,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 100px;
+  margin: 0 0 30px;
 }
 
 .info span {
