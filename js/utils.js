@@ -1,0 +1,23 @@
+export const TEXTS = {
+  'title': 'Memory game',
+  'newGame': 'Start new game',
+  'records': 'Records',
+  'openPairs': 'Open pairs:',
+  'moves': 'Moves:',
+  'imageN': 'Image #',
+  'cardCover': 'Card cover',
+  'winTitle': 'You win!',
+  'close': 'Close',
+};
+
+export const IMG_LIST = [
+  './assets/card-cover.jpg',
+  './assets/01.jpg',
+  './assets/02.jpg',
+  './assets/03.jpg',
+  './assets/04.jpg',
+  './assets/05.jpg',
+  './assets/06.jpg',
+  './assets/07.jpg',
+  './assets/08.jpg',
+];
