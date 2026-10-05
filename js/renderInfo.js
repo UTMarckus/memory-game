@@ -10,7 +10,7 @@ export default function renderInfo() {
   openPairsP.textContent = TEXTS.openPairs;
 
   const openPairsSpan = document.createElement('span');
-  openPairsSpan.classList.add('info__open-pairs-counter');
+  openPairsSpan.id = 'pairs-counter';
   openPairsSpan.textContent = '0'
   openPairsP.append(openPairsSpan);
 
@@ -19,7 +19,7 @@ export default function renderInfo() {
   movesP.textContent = TEXTS.moves;
 
   const movesSpan = document.createElement('span');
-  movesSpan.classList.add('info__open-pairs-counter');
+  movesSpan.id = 'moves-counter';
   movesSpan.textContent = '0'
   movesP.append(movesSpan);
 

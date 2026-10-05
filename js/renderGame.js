@@ -44,7 +44,7 @@ function onCardClick(e) {
     match = card;
   } else {
     if (card.dataset.cardIndex === match.dataset.cardIndex) {
-      openPairs += 1;
+      updateOpenPairsCounter();
       checkResult();
       match = null;
     } else {
@@ -57,11 +57,26 @@ function onCardClick(e) {
 
         match = null;
       }, 1500);
-
     }
+
+    updateMovesCounter();
   }
 }
 
 function checkResult() {
   if (openPairs === NUM_OF_PAIRS) window.alert('You win!');
+}
+
+function updateMovesCounter() {
+
+  movesCounter += 1;
+
+  document.querySelector('#moves-counter').textContent = movesCounter;
+}
+
+function updateOpenPairsCounter() {
+
+  openPairs += 1;
+
+  document.querySelector('#pairs-counter').textContent = openPairs;
 }
