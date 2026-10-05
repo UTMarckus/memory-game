@@ -33,6 +33,16 @@ export default function renderGame() {
   return mainEL;
 }
 
+export function resetGame() {
+  document.querySelector('main').remove();
+  movesCounter = 0;
+  openPairs = 0;
+  cardsList = null;
+  match = null;
+
+  document.body.append(renderGame());
+}
+
 function onCardClick(e) {
   const card = e.target.closest('.card')
 
@@ -44,6 +54,7 @@ function onCardClick(e) {
     match = card;
   } else {
     if (card.dataset.cardIndex === match.dataset.cardIndex) {
+      openPairs += 1;
       updateOpenPairsCounter();
       checkResult();
       match = null;
@@ -59,6 +70,7 @@ function onCardClick(e) {
       }, 1500);
     }
 
+    movesCounter += 1;
     updateMovesCounter();
   }
 }
@@ -68,15 +80,9 @@ function checkResult() {
 }
 
 function updateMovesCounter() {
-
-  movesCounter += 1;
-
   document.querySelector('#moves-counter').textContent = movesCounter;
 }
 
 function updateOpenPairsCounter() {
-
-  openPairs += 1;
-
   document.querySelector('#pairs-counter').textContent = openPairs;
 }

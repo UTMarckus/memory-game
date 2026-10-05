@@ -1,3 +1,4 @@
+import { resetGame } from './renderGame.js';
 import { TEXTS } from './utils.js';
 
 export default function renderHeader() {
@@ -21,6 +22,7 @@ export default function renderHeader() {
   newGameBtn.classList.add('header__button');
   newGameBtn.classList.add('header__button_new-game');
   newGameBtn.textContent = TEXTS.newGame;
+  newGameBtn.addEventListener('click', resetGame);
 
   const recordsBtn = document.createElement('button');
   recordsBtn.classList.add('header__button');
