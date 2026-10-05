@@ -76,7 +76,7 @@ function onCardClick(e) {
 }
 
 function checkResult() {
-  if (openPairs === NUM_OF_PAIRS) window.alert('You win!');
+  if (openPairs === NUM_OF_PAIRS) console.log('You win!');
 }
 
 function updateMovesCounter() {
