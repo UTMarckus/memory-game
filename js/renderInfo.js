@@ -1,4 +1,4 @@
-import { texts } from "./texts.js";
+import { TEXTS } from "./utils.js";
 
 export default function renderInfo() {
   const infoDiv = document.createElement('div');
@@ -7,7 +7,7 @@ export default function renderInfo() {
 
   const openPairsP = document.createElement('p');
   openPairsP.classList.add('info__open-pairs');
-  openPairsP.textContent = texts.openPairs;
+  openPairsP.textContent = TEXTS.openPairs;
 
   const openPairsSpan = document.createElement('span');
   openPairsSpan.classList.add('info__open-pairs-counter');
@@ -16,7 +16,7 @@ export default function renderInfo() {
 
   const movesP = document.createElement('p');
   movesP.classList.add('info__moves');
-  movesP.textContent = texts.moves;
+  movesP.textContent = TEXTS.moves;
 
   const movesSpan = document.createElement('span');
   movesSpan.classList.add('info__open-pairs-counter');

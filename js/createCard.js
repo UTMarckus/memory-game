@@ -1,16 +1,4 @@
-import { texts } from "./texts.js";
-
-const IMG_LIST = [
-  './assets/card-cover.jpg',
-  './assets/01.jpg',
-  './assets/02.jpg',
-  './assets/03.jpg',
-  './assets/04.jpg',
-  './assets/05.jpg',
-  './assets/06.jpg',
-  './assets/07.jpg',
-  './assets/08.jpg',
-];
+import { TEXTS, IMG_LIST } from "./utils.js";
 
 export default function createCard(index) {
   const card = document.createElement('div');
@@ -20,12 +8,12 @@ export default function createCard(index) {
 
   const img = document.createElement('img');
   img.src = IMG_LIST[index];
-  img.alt = `${texts.imageN}${index}`;
+  img.alt = `${TEXTS.imageN}${index}`;
 
   const cover = document.createElement('img');
   cover.classList.add('card__cover');
   cover.src = IMG_LIST[0];
-  cover.alt = texts.cardCover;
+  cover.alt = TEXTS.cardCover;
 
   card.append(img);
   card.append(cover);

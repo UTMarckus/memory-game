@@ -1,7 +1,9 @@
 import createCard from "./createCard.js";
+import createCardsList from "./createCardsList.js";
 import renderInfo from "./renderInfo.js";
+import { IMG_LIST } from "./utils.js";
 
-const NUM_OF_PAIRS = 8;
+const NUM_OF_PAIRS = IMG_LIST.length - 1;
 
 let movesCounter = 0;
 let openPairs = 0;
@@ -17,23 +19,7 @@ export default function renderGame() {
   const cards = document.createElement('div');
   cards.classList.add('game__cards');
 
-  cards.append(createCard(1));
-  cards.append(createCard(2));
-  cards.append(createCard(3));
-  cards.append(createCard(4));
-  cards.append(createCard(5));
-  cards.append(createCard(6));
-  cards.append(createCard(7));
-  cards.append(createCard(8));
-
-  cards.append(createCard(1));
-  cards.append(createCard(2));
-  cards.append(createCard(3));
-  cards.append(createCard(4));
-  cards.append(createCard(5));
-  cards.append(createCard(6));
-  cards.append(createCard(7));
-  cards.append(createCard(8));
+  cards.append(...createCardsList(NUM_OF_PAIRS));
 
   containerDiv.append(renderInfo());
   containerDiv.append(cards);

@@ -1,4 +1,4 @@
-import { texts } from './texts.js';
+import { TEXTS } from './utils.js';
 
 export default function renderHeader() {
   const header = document.createElement('header');
@@ -11,7 +11,7 @@ export default function renderHeader() {
 
   const gameTitle = document.createElement('h1');
   gameTitle.classList.add('header__title');
-  gameTitle.textContent = texts.title;
+  gameTitle.textContent = TEXTS.title;
 
 
   const controls = document.createElement('div');
@@ -20,12 +20,12 @@ export default function renderHeader() {
   const newGameBtn = document.createElement('button');
   newGameBtn.classList.add('header__button');
   newGameBtn.classList.add('header__button_new-game');
-  newGameBtn.textContent = texts.newGame;
+  newGameBtn.textContent = TEXTS.newGame;
 
   const recordsBtn = document.createElement('button');
   recordsBtn.classList.add('header__button');
   recordsBtn.classList.add('header__button_records');
-  recordsBtn.textContent = texts.records;
+  recordsBtn.textContent = TEXTS.records;
 
   controls.append(newGameBtn);
   controls.append(recordsBtn);
