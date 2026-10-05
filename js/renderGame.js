@@ -1,6 +1,6 @@
-import createCard from "./createCard.js";
 import createCardsList from "./createCardsList.js";
 import renderInfo from "./renderInfo.js";
+import renderWinModal from "./renderWinModal.js";
 import { IMG_LIST } from "./utils.js";
 
 const NUM_OF_PAIRS = IMG_LIST.length - 1;
@@ -76,7 +76,7 @@ function onCardClick(e) {
 }
 
 function checkResult() {
-  if (openPairs === NUM_OF_PAIRS) console.log('You win!');
+  if (openPairs === NUM_OF_PAIRS) renderWinModal(movesCounter);
 }
 
 function updateMovesCounter() {

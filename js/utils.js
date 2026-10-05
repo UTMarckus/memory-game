@@ -6,6 +6,8 @@ export const TEXTS = {
   'moves': 'Moves:',
   'imageN': 'Image #',
   'cardCover': 'Card cover',
+  'winTitle': 'You win!',
+  'close': 'Close',
 };
 
 export const IMG_LIST = [
